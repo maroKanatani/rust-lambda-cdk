@@ -13,10 +13,10 @@ export class AwsInfraStack extends cdk.Stack {
       "HelloWorldFunction",
       {
         code: lambda.DockerImageCode.fromImageAsset(
-          path.join(__dirname, "../lambda"),
-          {
-            cmd: ["hello.handler"],
-          }
+          path.join(__dirname, "../../"),
+          // {
+          //   cmd: ["hello.handler"],
+          // }
         ),
         // For ARM-based Lambda functions, specify the architecture
         architecture: lambda.Architecture.ARM_64,
